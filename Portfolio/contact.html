@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" type="image/png" href="user-avatar-male-illustration-design-free-png.webp">
+</head>
+
+<body>
+
+    <nav>
+        <label for="nav">NAVIGATE:</label>
+        <select id="nav" onchange="window.location.href=this.value">
+            <option value="" disabled selected>Select an option</option>
+            <option value="portfolio.html">HOME</option>
+            <option value="about.html">ABOUT</option>
+        </select>
+    </nav>
+
+    <main>
+        <h1 align="center">Contact Form</h1>
+        <table align="center" width="500px">
+            <tr>
+                <td>
+                    <form align="center" action="portfolio.html">
+                        <fieldset>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <br><br>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <br><br>
+
+                        <label for="phone">Phone:</label>
+                        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+                        <br><br>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="2" cols="30"></textarea>
+                        <br><br>
+
+                        <p>Preferred Contact Method:</p>
+                        <input type="checkbox" id="contactemail" name="contactmethod" value="email">
+                        <lable for="contactemail">Email</lable>
+                        <br><br>
+
+                        <input type="checkbox" id="contactphone" name="contactmethod" value="phone">
+                        <lable for="contactphone">Phone</lable>
+                        <br><br>
+
+                        <input type="checkbox" id="contacttext" name="contactmethod" value="text">
+                        <lable for="contacttext">Text</lable>
+                        <br><br>
+
+                        <p>Inquiry Type</p>
+
+                        <input type="radio" id="general" name="Inquiry" value="general">
+                        <label for="general">General</label>
+                        
+
+                        <input type="radio" id="business" name="Inquiry" value="business">
+                        <label for="business">Business</label>
+                        
+
+                        <input type="radio" id="support" name="Inquiry" value="support">
+                        <label for="support">Support</label>
+                        <br><br><br>
+
+                        <label for="Preferreddate">Preferred Contact Date:</label>
+                        <input type="date" id="Preferreddate" name="Preferreddate">
+                        <br><br>
+
+                        <label for="urgency">Urgency (1 - Low, 10 - High):</label>
+                        <input type="range" id="urgency" name="urgency" min="1" max="10" value="5"
+                            oninput="urgencyvalue.value = urgency.value">
+                        <output id="urgencyvalue">5</output>
+                        <br><br>
+
+                        <button>Submit</button>
+
+                    </form></fieldset>
+                </td>
+            </tr>
+        </table>
+    </main>
+</body>
+
+</html>
